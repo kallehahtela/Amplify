@@ -12,7 +12,7 @@ const Home = () => {
 
 const styles = StyleSheet.create({
   container : {
-    margin: 100,
+    margin: 0,
   }
 });
 

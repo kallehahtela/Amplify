@@ -15,12 +15,16 @@ const BottomTabsNavigator = () => {
   return (
       <BottomTab.Navigator screenOptions={{
         tabBarActiveTintColor: Colors.black,
-        tabBarInactiveTintColor: Colors.light_grey,
+        tabBarInactiveTintColor: Colors.black,
         tabBarStyle: {
           backgroundColor: Colors.white,
           height: Platform.OS === 'ios' ? 80 : 65,
           width: '100%',
+          paddingBottom: Platform.OS === 'ios' ? 24 : 10,
         },
+        tabBarLabelStyle: {
+          fontWeight: 'bold',
+        }
       }}
         sceneContainerStyle={{
           backgroundColor: Colors.white,
@@ -30,7 +34,7 @@ const BottomTabsNavigator = () => {
           component={Home}
           options={{
             tabBarIcon: () => (
-              <Ionicons name='home-outline' size={26} color={Colors.dark_grey} />
+              <Ionicons name='home-outline' size={26} color={Colors.black} />
             ),
           headerShown: false,
           }}
@@ -41,8 +45,9 @@ const BottomTabsNavigator = () => {
           component={Explore}
           options={{
             tabBarIcon: () => (
-              <Ionicons name='search-outline' size={26} color={Colors.dark_grey} />
+              <Ionicons name='search-outline' size={26} color={Colors.black} />
             ),
+            headerShown: false,
           }}
         />
 
@@ -51,8 +56,9 @@ const BottomTabsNavigator = () => {
           component={Profile}
           options={{
             tabBarIcon: () => (
-              <Ionicons name='person-outline' size={26} color={Colors.dark_grey} />
+              <Ionicons name='person-outline' size={26} color={Colors.black} />
             ),
+            headerShown: false,
           }}
         />
 
